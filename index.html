@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <title>黃金廣告投手 | 全域流量自動化與廣告佈局專家</title>
+    <!-- 這裡放您的 CSS 連結 -->
+     <link rel="stylesheet" href="style.css">
+     <link rel="icon" href="images/icon.png" type="image/png">
+</head>
+<body>
+
+    <!-- 導覽列 -->
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="images/logob.png" alt="黃金廣告投手">
+        </a>
+
+        <!-- 新增：手機版漢堡選單按鈕 -->
+        <div class="mobile-menu-btn">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <!-- 這裡原本的 ul 保持不變，但在手機版會被 CSS 隱藏並變形 -->
+        <ul class="nav-links">
+            <li><a href="service-assets.html">資產建置</a></li>
+            <li><a href="service-ads.html">流量曝光</a></li>
+            <li><a href="technology.html">技術核心</a></li>
+            <li><a href="contact.html" class="btn-cta">立即諮詢</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- 2. 首頁主視覺 (Hero Section) -->
+    <section id="hero">
+        <div class="container hero-content">
+            <h1>投出您的 <span class="text-gold">黃金流量</span><br>精準擊中目標客戶</h1>
+            <p>結合 AI 自動化站群與精準廣告投放，為您打造全域流量護城河。<br>讓每一分預算都轉化為真實訂單。</p>
+            
+            <!-- 數據儀表板 -->
+            <div class="stats-container">
+                <div class="stat-item">
+                    <span class="counter" data-target="150">0</span><span>+</span>
+                    <p>服務企業客戶</p>
+                </div>
+                <div class="stat-item">
+                    <span class="counter" data-target="850">0</span><span>%</span>
+                    <p>平均 ROI 成長</p>
+                </div>
+                <div class="stat-item">
+                    <span class="counter" data-target="10000">0</span><span>+</span>
+                    <p>每日自動化產出</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. 核心服務分流 (Services Split) -->
+    <section id="services">
+        <div class="container">
+            <div class="split-screen-container">
+                <!-- 左邊：資產建置 -->
+                <div class="service-card card-asset">
+                    <h2>資產建置 <span style="font-size:0.6em; color:#00f2ff; display:block; margin-top:5px;">DIGITAL ASSETS</span></h2>
+                    <p>長期主義者的選擇。透過 AI 技術搭建龐大網站矩陣，霸佔搜尋引擎關鍵字，建立屬於您的私域流量池。</p>
+                    <ul style="margin-bottom: 30px; color: #ccc;">
+                        <li style="margin-bottom: 10px;">✓ AI 批量內容生成系統</li>
+                        <li style="margin-bottom: 10px;">✓ 網域權重培養與養護</li>
+                        <li style="margin-bottom: 10px;">✓ 24hr 自動化運維監控</li>
+                    </ul>
+                    <a href="service-assets.html" class="btn-outline">了解資產方案 →</a>
+                </div>
+
+                <!-- 右邊：流量曝光 -->
+                <div class="service-card card-ads">
+                    <h2>流量曝光 <span style="font-size:0.6em; color:var(--orange-accent); display:block; margin-top:5px;">TRAFFIC & ADS</span></h2>
+                    <p>立即見效的選擇。透過精準受眾鎖定與即時競價策略，在最短時間內獲取大量高意向客戶。</p>
+                    <ul style="margin-bottom: 30px; color: #ccc;">
+                        <li style="margin-bottom: 10px;">⚡ Google / Meta 廣告代操</li>
+                        <li style="margin-bottom: 10px;">⚡ ROI 轉換率數據優化</li>
+                        <li style="margin-bottom: 10px;">⚡ 高點擊視覺素材設計</li>
+                    </ul>
+                    <a href="service-ads.html" class="btn-outline">了解廣告方案 →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. 為什麼選擇我們 (Why Us) -->
+    <section id="why-us" style="background: rgba(0,0,0,0.2);">
+        <div class="container" style="text-align: center;">
+            <h2 style="margin-bottom: 60px;">為什麼選擇 <span class="text-gold">黃金廣告投手</span>？</h2>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;">
+                <!-- 特點 1 -->
+                <div>
+                    <div style="font-size: 3rem; margin-bottom: 20px;">🤖</div>
+                    <h3 style="color: #fff; margin-bottom: 15px;">AI 驅動效率</h3>
+                    <p style="color: var(--text-muted);">拒絕人工低效操作。我們運用最新的 LLM 模型，讓內容產出與廣告優化效率提升 10 倍以上。</p>
+                </div>
+                <!-- 特點 2 -->
+                <div>
+                    <div style="font-size: 3rem; margin-bottom: 20px;">📊</div>
+                    <h3 style="color: #fff; margin-bottom: 15px;">數據透明化</h3>
+                    <p style="color: var(--text-muted);">沒有黑箱作業。您將擁有專屬的數據儀表板，隨時查看流量來源、花費與轉換成效。</p>
+                </div>
+                <!-- 特點 3 -->
+                <div>
+                    <div style="font-size: 3rem; margin-bottom: 20px;">🎯</div>
+                    <h3 style="color: #fff; margin-bottom: 15px;">全域佈局思維</h3>
+                    <p style="color: var(--text-muted);">我們不只懂廣告，更懂 SEO。從短期爆發到長期積累，為您制定最完整的行銷戰略。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. 頁尾 CTA -->
+    <section style="text-align: center; padding: 100px 20px;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 30px;">準備好讓業績 <span class="text-gold">翻倍成長</span> 了嗎？</h2>
+        <p style="color: var(--text-muted); margin-bottom: 40px;">立即預約免費諮詢，讓我們為您診斷流量缺口。</p>
+        <a href="contact.html" class="btn-cta" style="font-size: 1.2rem; padding: 15px 40px;">開始您的投手計畫</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 黃金廣告投手 Golden Ad Pitcher. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
