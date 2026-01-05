@@ -5,33 +5,20 @@
 
     <meta charset="UTF-8">
     <title>黃金廣告投手 | 全域流量自動化與廣告佈局專家</title>
-    <!-- 這裡放您的 CSS 連結 -->
-     <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- 自定義 CSS -->
+    <link rel="stylesheet" href="style.css">
      <link rel="icon" href="images/icon.png" type="image/png">
 </head>
 <body>
 
     <!-- 導覽列 -->
-    <nav>
-        <a href="index.html" class="logo">
-            <img src="images/logob.png" alt="黃金廣告投手">
-        </a>
-
-        <!-- 新增：手機版漢堡選單按鈕 -->
-        <div class="mobile-menu-btn">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-
-        <!-- 這裡原本的 ul 保持不變，但在手機版會被 CSS 隱藏並變形 -->
-        <ul class="nav-links">
-            <li><a href="service-assets.html">資產建置</a></li>
-            <li><a href="service-ads.html">流量曝光</a></li>
-            <li><a href="technology.html">技術核心</a></li>
-            <li><a href="contact.html" class="btn-cta">立即諮詢</a></li>
-        </ul>
-    </nav>
+    <div id="navbar-placeholder"></div>
 
     <section class="container" style="padding-top: 120px;">
         <h1 class="text-gold" style="text-align: center; margin-bottom: 50px;">AI 自動化核心技術</h1>
@@ -55,10 +42,21 @@
         </div>
     </section>
 
-
+    <!-- 頁尾 -->
     <footer>
-        <p>&copy; 2025 黃金廣告投手 Golden Ad Pitcher. All Rights Reserved.</p>
+        <div id="footer-placeholder"></div>
     </footer>
+    
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- 自定義 JS -->
     <script src="script.js"></script>
+
+    <!-- 頁首載入器腳本 -->
+    <script src="navbar-loader.js"></script>
+
+    <!-- 頁尾載入器腳本 -->
+    <script src="footer-loader.js"></script>
 </body>
 </html>

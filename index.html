@@ -1,131 +1,706 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-
     <meta charset="UTF-8">
-    <title>黃金廣告投手 | 全域流量自動化與廣告佈局專家</title>
-    <!-- 這裡放您的 CSS 連結 -->
-     <link rel="stylesheet" href="style.css">
-     <link rel="icon" href="images/icon.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>數位行銷專家 - 流量與轉換解決方案</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- 自定義 CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <!-- 導覽列 -->
-    <nav>
-        <a href="index.html" class="logo">
-            <img src="images/logob.png" alt="黃金廣告投手">
-        </a>
-
-        <!-- 新增：手機版漢堡選單按鈕 -->
-        <div class="mobile-menu-btn">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-
-        <!-- 這裡原本的 ul 保持不變，但在手機版會被 CSS 隱藏並變形 -->
-        <ul class="nav-links">
-            <li><a href="service-assets.html">資產建置</a></li>
-            <li><a href="service-ads.html">流量曝光</a></li>
-            <li><a href="technology.html">技術核心</a></li>
-            <li><a href="contact.html" class="btn-cta">立即諮詢</a></li>
-        </ul>
-    </nav>
+    <div id="navbar-placeholder"></div>
 
 
-    <!-- 2. 首頁主視覺 (Hero Section) -->
-    <section id="hero">
-        <div class="container hero-content">
-            <h1>投出您的 <span class="text-gold">黃金流量</span><br>精準擊中目標客戶</h1>
-            <p>結合 AI 自動化站群與精準廣告投放，為您打造全域流量護城河。<br>讓每一分預算都轉化為真實訂單。</p>
+    <!-- 1. Hero 區塊 -->
+    <section id="hero" class="py-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-text">
+                    <h1>通過<span class="text-blue">數據驅動</span>的行銷策略<br>提升您的品牌影響力</h1>
+                    <p>我們是專業的數位行銷團隊，致力於透過 SEO 優化、精準廣告投放和社群媒體行銷，為您的企業帶來高品質的流量與轉換。</p>
+                    <a href="contact.html" class="btn-cta">免費行銷診斷 <i class="fas fa-arrow-right ms-2"></i></a>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0 hero-image">
+                    <img src="images/hero-dashboard.jpg" alt="數位行銷儀表板" class="img-fluid">
+                </div>
+            </div>
             
             <!-- 數據儀表板 -->
-            <div class="stats-container">
-                <div class="stat-item">
-                    <span class="counter" data-target="150">0</span><span>+</span>
-                    <p>服務企業客戶</p>
-                </div>
-                <div class="stat-item">
-                    <span class="counter" data-target="850">0</span><span>%</span>
-                    <p>平均 ROI 成長</p>
-                </div>
-                <div class="stat-item">
-                    <span class="counter" data-target="10000">0</span><span>+</span>
-                    <p>每日自動化產出</p>
+            <div class="stats-container mt-5">
+                <div class="row text-center">
+                    <div class="col-md-4 stat-item">
+                        <span class="counter" data-target="150">0</span><span>+</span>
+                        <p>服務企業客戶</p>
+                    </div>
+                    <div class="col-md-4 stat-item">
+                        <span class="counter" data-target="850">0</span><span>%</span>
+                        <p>平均 ROI 成長</p>
+                    </div>
+                    <div class="col-md-4 stat-item">
+                        <span class="counter" data-target="10000">0</span><span>+</span>
+                        <p>每日自動化產出</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 3. 核心服務分流 (Services Split) -->
-    <section id="services">
-        <div class="container">
-            <div class="split-screen-container">
+    <!-- 2. 關於我們區塊 -->
+    <section class="bg-white py-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="images/about-us.jpg" alt="關於我們" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="mb-4">關於<span class="text-blue">我們的故事</span></h2>
+                    <p class="text-muted mb-4">
+                        我們是台灣首屈一指的數位行銷專家團隊，由業界資深顧問組成，致力於運用最新的 AI 技術和數據分析，為客戶打造量身定制的行銷解決方案。
+                    </p>
+                    <p class="text-muted mb-4">
+                        五年來，我們已協助超過 150 家企業實現業績突破，平均為客戶帶來 8.5 倍的行銷投資回報率，成為企業主值得信賴的行銷夥伴。
+                    </p>
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <div class="about-feature">
+                                <div class="feature-icon">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <span>資料導向決策</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="about-feature">
+                                <div class="feature-icon">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <span>全通路整合</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="about-feature">
+                                <div class="feature-icon">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <span>AI 技術驅動</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="about-feature">
+                                <div class="feature-icon">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <span>專業顧問團隊</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. 全寬橫幅 -->
+    <section class="full-width-banner" style="background-image: url('images/marketing-banner.jpg');">
+        <div class="container banner-content">
+            <h2>數位行銷的<span class="banner-highlight">未來</span>已來</h2>
+            <p>運用 AI 技術與數據分析，為您的品牌開啟全新成長通道</p>
+        </div>
+    </section>
+
+    <!-- 4. 核心服務分流 -->
+    <section id="services" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2>我們的 <span class="text-blue">核心服務</span></h2>
+                <p class="text-muted mx-auto" style="max-width: 700px;">從網站建設到廣告投放，我們提供全方位的數位行銷解決方案，助您業績突飛猛進</p>
+            </div>
+            
+            <div class="row">
                 <!-- 左邊：資產建置 -->
-                <div class="service-card card-asset">
-                    <h2>資產建置 <span style="font-size:0.6em; color:#00f2ff; display:block; margin-top:5px;">DIGITAL ASSETS</span></h2>
-                    <p>長期主義者的選擇。透過 AI 技術搭建龐大網站矩陣，霸佔搜尋引擎關鍵字，建立屬於您的私域流量池。</p>
-                    <ul style="margin-bottom: 30px; color: #ccc;">
-                        <li style="margin-bottom: 10px;">✓ AI 批量內容生成系統</li>
-                        <li style="margin-bottom: 10px;">✓ 網域權重培養與養護</li>
-                        <li style="margin-bottom: 10px;">✓ 24hr 自動化運維監控</li>
-                    </ul>
-                    <a href="service-assets.html" class="btn-outline">了解資產方案 →</a>
+                <div class="col-lg-6 mb-4">
+                    <div class="service-card card-asset h-100">
+                        <h2>
+                            <div class="icon-container">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            資產建置
+                        </h2>
+                        <p class="mb-4">長期主義者的選擇。透過 AI 技術搭建龐大網站矩陣，霸佔搜尋引擎關鍵字，建立屬於您的私域流量池。</p>
+                        <img src="images/digital-assets.jpg" alt="數位資產建置" class="img-fluid rounded mb-4 service-img">
+                        <ul class="mb-4 text-muted service-list">
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> AI 批量內容生成系統</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> 網域權重培養與養護</li>
+                            <li><i class="fas fa-check-circle text-primary me-2"></i> 24hr 自動化運維監控</li>
+                        </ul>
+                        <a href="service-assets.html" class="btn-outline">了解資產方案 <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
                 </div>
 
                 <!-- 右邊：流量曝光 -->
-                <div class="service-card card-ads">
-                    <h2>流量曝光 <span style="font-size:0.6em; color:var(--orange-accent); display:block; margin-top:5px;">TRAFFIC & ADS</span></h2>
-                    <p>立即見效的選擇。透過精準受眾鎖定與即時競價策略，在最短時間內獲取大量高意向客戶。</p>
-                    <ul style="margin-bottom: 30px; color: #ccc;">
-                        <li style="margin-bottom: 10px;">⚡ Google / Meta 廣告代操</li>
-                        <li style="margin-bottom: 10px;">⚡ ROI 轉換率數據優化</li>
-                        <li style="margin-bottom: 10px;">⚡ 高點擊視覺素材設計</li>
-                    </ul>
-                    <a href="service-ads.html" class="btn-outline">了解廣告方案 →</a>
+                <div class="col-lg-6 mb-4">
+                    <div class="service-card card-ads h-100">
+                        <h2>
+                            <div class="icon-container">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            流量曝光
+                        </h2>
+                        <p class="mb-4">立即見效的選擇。透過精準受眾鎖定與即時競價策略，在最短時間內獲取大量高意向客戶。</p>
+                        <img src="images/ads-traffic.jpg" alt="廣告流量投放" class="img-fluid rounded mb-4 service-img">
+                        <ul class="mb-4 text-muted service-list">
+                            <li><i class="fas fa-bolt text-warning me-2"></i> Google / Meta 廣告代操</li>
+                            <li><i class="fas fa-bolt text-warning me-2"></i> ROI 轉換率數據優化</li>
+                            <li><i class="fas fa-bolt text-warning me-2"></i> 高點擊視覺素材設計</li>
+                        </ul>
+                        <a href="service-ads.html" class="btn-outline">了解廣告方案 <i class="fas fa-arrow-right ms-2"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 4. 為什麼選擇我們 (Why Us) -->
-    <section id="why-us" style="background: rgba(0,0,0,0.2);">
-        <div class="container" style="text-align: center;">
-            <h2 style="margin-bottom: 60px;">為什麼選擇 <span class="text-gold">黃金廣告投手</span>？</h2>
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;">
+    <!-- 5. 工作流程 -->
+    <section class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2>我們的 <span class="text-blue">工作流程</span></h2>
+                <p class="text-muted mx-auto" style="max-width: 700px;">透過系統化的流程，確保每個專案都能達到最佳成效</p>
+            </div>
+            
+            <div class="process-timeline">
+                <!-- 步驟 1 -->
+                <div class="row process-item">
+                    <div class="col-lg-5 process-content">
+                        <h3>需求分析與診斷</h3>
+                        <p>深入了解您的業務目標、目標客群和市場定位，進行全方位數位行銷診斷，找出成長瓶頸與機會。</p>
+                    </div>
+                    <div class="col-lg-2 d-flex justify-content-center">
+                        <div class="process-number">1</div>
+                    </div>
+                    <div class="col-lg-5 d-none d-lg-block">
+                        <img src="images/process-1.jpg" alt="需求分析" class="img-fluid rounded process-image">
+                    </div>
+                </div>
+                
+                <!-- 步驟 2 -->
+                <div class="row process-item">
+                    <div class="col-lg-5 d-none d-lg-block order-lg-1">
+                        <img src="images/process-2.jpg" alt="策略規劃" class="img-fluid rounded process-image">
+                    </div>
+                    <div class="col-lg-2 d-flex justify-content-center order-lg-2">
+                        <div class="process-number">2</div>
+                    </div>
+                    <div class="col-lg-5 process-content order-lg-3">
+                        <h3>策略規劃與設計</h3>
+                        <p>基於診斷結果，制定量身定制的行銷策略，包括內容規劃、渠道選擇和預算分配，確保資源最大化利用。</p>
+                    </div>
+                </div>
+                
+                <!-- 步驟 3 -->
+                <div class="row process-item">
+                    <div class="col-lg-5 process-content">
+                        <h3>執行與優化</h3>
+                        <p>專業團隊全程負責活動執行，持續監控數據表現，進行 A/B 測試和即時調整，確保每一分行銷預算都發揮最大效益。</p>
+                    </div>
+                    <div class="col-lg-2 d-flex justify-content-center">
+                        <div class="process-number">3</div>
+                    </div>
+                    <div class="col-lg-5 d-none d-lg-block">
+                        <img src="images/process-3.jpg" alt="執行優化" class="img-fluid rounded process-image">
+                    </div>
+                </div>
+                
+                <!-- 步驟 4 -->
+                <div class="row process-item">
+                    <div class="col-lg-5 d-none d-lg-block order-lg-1">
+                        <img src="images/process-4.jpg" alt="數據分析" class="img-fluid rounded process-image">
+                    </div>
+                    <div class="col-lg-2 d-flex justify-content-center order-lg-2">
+                        <div class="process-number">4</div>
+                    </div>
+                    <div class="col-lg-5 process-content order-lg-3">
+                        <h3>數據分析與報告</h3>
+                        <p>提供詳盡的數據分析報告，包括流量來源、用戶行為和轉換路徑分析，協助您了解行銷活動的實際效益和投資回報率。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. 成功案例 -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2>成功 <span class="text-blue">案例展示</span></h2>
+                <p class="text-muted mx-auto" style="max-width: 700px;">我們已協助眾多企業實現業績突破，以下是部分成功案例</p>
+            </div>
+            
+            <div class="row">
+                <!-- 案例 1 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card case-study-card h-100">
+                        <div class="case-image-container">
+                            <img src="images/case-1.jpg" alt="電商轉換率優化" class="case-image">
+                            <div class="case-overlay">
+                                <a href="case-study-1.html" class="case-link">查看詳情</a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3>全球知名運動品牌</h3>
+                            <div class="case-category">電商轉換率優化</div>
+                            <div class="case-result">成效：銷售額提升 245%</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 案例 2 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card case-study-card h-100">
+                        <div class="case-image-container">
+                            <img src="images/case-2.jpg" alt="品牌知名度提升" class="case-image">
+                            <div class="case-overlay">
+                                <a href="case-study-2.html" class="case-link">查看詳情</a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3>台灣新創飲品品牌</h3>
+                            <div class="case-category">品牌知名度提升</div>
+                            <div class="case-result">成效：Instagram 粉絲成長 500%</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 案例 3 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card case-study-card h-100">
+                        <div class="case-image-container">
+                            <img src="images/case-3.jpg" alt="SEO 流量優化" class="case-image">
+                            <div class="case-overlay">
+                                <a href="case-study-3.html" class="case-link">查看詳情</a>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3>B2B 專業服務公司</h3>
+                            <div class="case-category">SEO 流量優化</div>
+                            <div class="case-result">成效：自然流量增加 320%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="case-studies.html" class="btn-outline">查看更多案例 <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. 為什麼選擇我們 -->
+    <section id="why-us" class="py-5 bg-light">
+        <div class="container py-5 text-center">
+            <h2 class="mb-3">為什麼選擇 <span class="text-blue">我們</span>？</h2>
+            <p class="text-muted mx-auto mb-5" style="max-width: 700px;">我們擁有豐富的數位行銷經驗，能夠為您提供全方位的流量解決方案</p>
+            
+            <div class="row">
                 <!-- 特點 1 -->
-                <div>
-                    <div style="font-size: 3rem; margin-bottom: 20px;">🤖</div>
-                    <h3 style="color: #fff; margin-bottom: 15px;">AI 驅動效率</h3>
-                    <p style="color: var(--text-muted);">拒絕人工低效操作。我們運用最新的 LLM 模型，讓內容產出與廣告優化效率提升 10 倍以上。</p>
+                <div class="col-lg-4 mb-4">
+                    <div class="card feature-card h-100">
+                        <div class="card-body">
+                            <div class="card-icon mx-auto">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h3 class="mb-3">AI 驅動效率</h3>
+                            <p class="text-muted">拒絕人工低效操作。我們運用最新的 LLM 模型，讓內容產出與廣告優化效率提升 10 倍以上。</p>
+                        </div>
+                    </div>
                 </div>
                 <!-- 特點 2 -->
-                <div>
-                    <div style="font-size: 3rem; margin-bottom: 20px;">📊</div>
-                    <h3 style="color: #fff; margin-bottom: 15px;">數據透明化</h3>
-                    <p style="color: var(--text-muted);">沒有黑箱作業。您將擁有專屬的數據儀表板，隨時查看流量來源、花費與轉換成效。</p>
+                <div class="col-lg-4 mb-4">
+                    <div class="card feature-card h-100">
+                        <div class="card-body">
+                            <div class="card-icon mx-auto">
+                                <i class="fas fa-chart-pie"></i>
+                            </div>
+                            <h3 class="mb-3">數據透明化</h3>
+                            <p class="text-muted">沒有黑箱作業。您將擁有專屬的數據儀表板，隨時查看流量來源、花費與轉換成效。</p>
+                        </div>
+                    </div>
                 </div>
                 <!-- 特點 3 -->
-                <div>
-                    <div style="font-size: 3rem; margin-bottom: 20px;">🎯</div>
-                    <h3 style="color: #fff; margin-bottom: 15px;">全域佈局思維</h3>
-                    <p style="color: var(--text-muted);">我們不只懂廣告，更懂 SEO。從短期爆發到長期積累，為您制定最完整的行銷戰略。</p>
+                <div class="col-lg-4 mb-4">
+                    <div class="card feature-card h-100">
+                        <div class="card-body">
+                            <div class="card-icon mx-auto">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <h3 class="mb-3">全域佈局思維</h3>
+                            <p class="text-muted">我們不只懂廣告，更懂 SEO。從短期爆發到長期積累，為您制定最完整的行銷戰略。</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 5. 頁尾 CTA -->
-    <section style="text-align: center; padding: 100px 20px;">
-        <h2 style="font-size: 2.5rem; margin-bottom: 30px;">準備好讓業績 <span class="text-gold">翻倍成長</span> 了嗎？</h2>
-        <p style="color: var(--text-muted); margin-bottom: 40px;">立即預約免費諮詢，讓我們為您診斷流量缺口。</p>
-        <a href="contact.html" class="btn-cta" style="font-size: 1.2rem; padding: 15px 40px;">開始您的投手計畫</a>
+    <!-- 8. 團隊成員介紹 -->
+    <section class="py-5 bg-white">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2>專業 <span class="text-blue">團隊成員</span></h2>
+                <p class="text-muted mx-auto" style="max-width: 700px;">擁有豐富經驗的專業團隊，為您的品牌提供全方位支援</p>
+            </div>
+            
+            <div class="row">
+                <!-- 成員 1 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card team-member-card h-100">
+                        <div class="member-image-container">
+                            <img src="images/team-1.jpg" alt="團隊成員" class="member-image">
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <h3>王大明</h3>
+                            <div class="member-title">創辦人暨執行長</div>
+                            <div class="member-bio">前 Google 廣告顧問，擁有 15 年數位行銷經驗</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 成員 2 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card team-member-card h-100">
+                        <div class="member-image-container">
+                            <img src="images/team-2.jpg" alt="團隊成員" class="member-image">
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <h3>林小華</h3>
+                            <div class="member-title">首席策略官</div>
+                            <div class="member-bio">擁有豐富的跨國品牌策略規劃經驗</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 成員 3 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card team-member-card h-100">
+                        <div class="member-image-container">
+                            <img src="images/team-3.jpg" alt="團隊成員" class="member-image">
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <h3>張美玲</h3>
+                            <div class="member-title">創意總監</div>
+                            <div class="member-bio">前知名設計公司資深設計師，擅長視覺設計</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 成員 4 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="card team-member-card h-100">
+                        <div class="member-image-container">
+                            <img src="images/team-4.jpg" alt="團隊成員" class="member-image">
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <h3>陳志明</h3>
+                            <div class="member-title">技術長</div>
+                            <div class="member-bio">AI 與數據分析專家，負責自動化系統開發</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- 9. 客戶見證 -->
+    <section class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2>客戶 <span class="text-blue">真實評價</span></h2>
+                <p class="text-muted mx-auto" style="max-width: 700px;">聽聽我們的客戶如何評價我們的服務</p>
+            </div>
+            
+            <div class="row">
+                <!-- 見證 1 -->
+                <div class="col-lg-4 mb-4">
+                    <div class="card testimonial-card h-100">
+                        <div class="card-body">
+                            <div class="testimonial-quote">
+                                <i class="fas fa-quote-left"></i>
+                                數位行銷專家團隊徹底改變了我們的行銷策略。從無到有建立起完整的數位生態系統，不僅大幅提升了品牌知名度，更為我們帶來源源不絕的訂單。最令人驚訝的是 ROI 竟然高達 12 倍！
+                                <i class="fas fa-quote-right"></i>
+                            </div>
+                            <div class="testimonial-author mt-4">
+                                <img src="images/client-1-avatar.jpg" alt="客戶頭像" class="author-image">
+                                <div>
+                                    <h4>陳冠宇</h4>
+                                    <p>某電商平台 CEO</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 見證 2 -->
+                <div class="col-lg-4 mb-4">
+                    <div class="card testimonial-card h-100">
+                        <div class="card-body">
+                            <div class="testimonial-quote">
+                                <i class="fas fa-quote-left"></i>
+                                與其他廣告代理商最大的不同在於，他們真的懂數據分析。每一次的策略調整都有明確的數據支持，而不是憑感覺做決策。三個月內，我們的廣告花費減少了 30%，而轉換率卻提高了 215%。
+                                <i class="fas fa-quote-right"></i>
+                            </div>
+                            <div class="testimonial-author mt-4">
+                                <img src="images/client-2-avatar.jpg" alt="客戶頭像" class="author-image">
+                                <div>
+                                    <h4>黃雅芳</h4>
+                                    <p>美妝品牌行銷經理</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 見證 3 -->
+                <div class="col-lg-4 mb-4">
+                    <div class="card testimonial-card h-100">
+                        <div class="card-body">
+                            <div class="testimonial-quote">
+                                <i class="fas fa-quote-left"></i>
+                                我們是 B2B 服務公司，過去一直專注於傳統業務開發，從未認真經營數位管道。在他們的協助下，我們現在的官網每月能帶來超過 50 個高品質業務線索，大幅降低了我們的客戶獲取成本。
+                                <i class="fas fa-quote-right"></i>
+                            </div>
+                            <div class="testimonial-author mt-4">
+                                <img src="images/client-3-avatar.jpg" alt="客戶頭像" class="author-image">
+                                <div>
+                                    <h4>林志偉</h4>
+                                    <p>科技公司業務總監</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. 合作品牌展示 -->
+    <section class="py-5 bg-white">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2>值得信賴的 <span class="text-blue">合作夥伴</span></h2>
+                <p class="text-muted mx-auto" style="max-width: 700px;">這些企業已經通過我們的服務獲得了顯著的成長</p>
+            </div>
+            
+            <div class="row align-items-center text-center">
+                <div class="col-6 col-md-3 mb-4">
+                    <img src="images/client-logo-1.png" alt="客戶品牌" class="client-logo">
+                </div>
+                <div class="col-6 col-md-3 mb-4">
+                    <img src="images/client-logo-2.png" alt="客戶品牌" class="client-logo">
+                </div>
+                <div class="col-6 col-md-3 mb-4">
+                    <img src="images/client-logo-3.png" alt="客戶品牌" class="client-logo">
+                </div>
+                <div class="col-6 col-md-3 mb-4">
+                    <img src="images/client-logo-4.png" alt="客戶品牌" class="client-logo">
+                </div>
+                <div class="col-6 col-md-3 mb-4">
+                    <img src="images/client-logo-5.png" alt="客戶品牌" class="client-logo">
+                </div>
+                <div class="col-6 col-md-3 mb-4">
+                    <img src="images/client-logo-6.png" alt="客戶品牌" class="client-logo">
+                </div>
+                <div class="col-6 col-md-3 mb-4">
+                    <img src="images/client-logo-7.png" alt="客戶品牌" class="client-logo">
+                </div>
+                <div class="col-6 col-md-3 mb-4">
+                    <img src="images/client-logo-8.png" alt="客戶品牌" class="client-logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. 部落格文章預覽 -->
+    <section class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2>數位行銷 <span class="text-blue">專業分享</span></h2>
+                <p class="text-muted mx-auto" style="max-width: 700px;">最新的行銷趨勢、技巧和案例分析</p>
+            </div>
+            
+            <div class="row">
+                <!-- 文章 1 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card blog-post-card h-100">
+                        <div class="blog-image">
+                            <img src="images/blog-1.jpg" alt="部落格文章" class="img-fluid">
+                            <div class="blog-category">SEO 優化</div>
+                        </div>
+                        <div class="card-body">
+                            <div class="blog-date"><i class="far fa-calendar-alt me-1"></i> 2025 年 12 月 15 日</div>
+                            <h3>2025 年 SEO 最新趨勢：AI 內容與搜尋引擎演算法變化</h3>
+                            <p>隨著 Google 持續更新其演算法，SEO 策略也需要相應調整。本文探討 AI 生成內容如何影響 SEO 排名...</p>
+                            <a href="blog-post-1.html" class="blog-link">閱讀全文 <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 文章 2 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card blog-post-card h-100">
+                        <div class="blog-image">
+                            <img src="images/blog-2.jpg" alt="部落格文章" class="img-fluid">
+                            <div class="blog-category">廣告投放</div>
+                        </div>
+                        <div class="card-body">
+                            <div class="blog-date"><i class="far fa-calendar-alt me-1"></i> 2025 年 12 月 10 日</div>
+                            <h3>Meta 廣告平台最新功能深度解析：提升 ROAS 的關鍵因素</h3>
+                            <p>Meta 近期推出了多項新功能，能顯著提升廣告投放效益。我們將分享如何利用這些功能優化廣告系列...</p>
+                            <a href="blog-post-2.html" class="blog-link">閱讀全文 <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 文章 3 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card blog-post-card h-100">
+                        <div class="blog-image">
+                            <img src="images/blog-3.jpg" alt="部落格文章" class="img-fluid">
+                            <div class="blog-category">數據分析</div>
+                        </div>
+                        <div class="card-body">
+                            <div class="blog-date"><i class="far fa-calendar-alt me-1"></i> 2025 年 12 月 5 日</div>
+                            <h3>Google Analytics 4 進階應用：挖掘用戶行為洞察的秘密</h3>
+                            <p>GA4 與舊版有顯著不同，本文將教您如何設置和分析關鍵指標，從數據中發掘商機和優化方向...</p>
+                            <a href="blog-post-3.html" class="blog-link">閱讀全文 <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <a href="blog.html" class="btn-outline">查看更多文章 <i class="fas fa-arrow-right ms-1"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. FAQ 區塊 -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2>常見 <span class="text-blue">問答集</span></h2>
+                <p class="text-muted mx-auto" style="max-width: 700px;">解答您可能有的疑問</p>
+            </div>
+            
+            <div class="accordion faq-container" id="faqAccordion">
+                <!-- 問題 1 -->
+                <div class="accordion-item faq-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne">
+                            你們的服務收費標準是怎樣的？
+                        </button>
+                    </h2>
+                    <div id="faqOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            我們的收費模式分為專案制和月費制兩種。專案制適合單次行銷活動，如網站建置、品牌視覺設計等；月費制適合長期合作，如 SEO 優化、社群經營和廣告投放等。每個方案都會根據客戶需求客製化，歡迎聯絡我們獲取詳細報價。
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 問題 2 -->
+                <div class="accordion-item faq-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo">
+                            數位行銷需要多久才能看到效果？
+                        </button>
+                    </h2>
+                    <div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            不同類型的數位行銷策略見效時間各異。付費廣告通常能在幾天內看到流量和轉換；內容行銷和 SEO 則屬於長期策略，通常需要 3-6 個月才能看到明顯成效。我們會根據您的業務目標和時間框架，制定最適合的策略組合。
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 問題 3 -->
+                <div class="accordion-item faq-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree">
+                            小型企業適合什麼類型的數位行銷？
+                        </button>
+                    </h2>
+                    <div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            小型企業通常預算有限，我們建議從當地 SEO 和社群媒體行銷開始，這些管道投資成本較低但能帶來良好效果。隨著業務增長，再逐步擴展到 Google 和 Meta 廣告。我們會根據您的行業特性和預算，提供最具成本效益的解決方案。
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 問題 4 -->
+                <div class="accordion-item faq-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFour">
+                            如何衡量數位行銷活動的成效？
+                        </button>
+                    </h2>
+                    <div id="faqFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            我們會為每個客戶建立專屬的數據儀表板，追蹤關鍵績效指標(KPI)，如網站流量、轉換率、客戶獲取成本、投資回報率等。您可以隨時登入查看即時數據，我們也會定期提供詳細的績效報告和優化建議。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. 全寬 CTA -->
+    <section class="full-width-banner" style="background-image: url('images/cta-banner.jpg');">
+        <div class="container banner-content">
+            <h2>準備好 <span class="banner-highlight">啟動</span> 您的數位轉型了嗎？</h2>
+            <p class="mb-4">立即預約免費諮詢，讓我們為您的品牌打造專屬行銷策略</p>
+            <a href="contact.html" class="btn btn-light btn-lg">開始免費諮詢 <i class="fas fa-angle-right ms-2"></i></a>
+        </div>
+    </section>
+
+    <!-- 14. 頁尾 -->
     <footer>
-        <p>&copy; 2025 黃金廣告投手 Golden Ad Pitcher. All Rights Reserved.</p>
+        <div id="footer-placeholder"></div>
     </footer>
+    
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- 自定義 JS -->
     <script src="script.js"></script>
+
+    <!-- 頁首載入器腳本 -->
+    <script src="navbar-loader.js"></script>
+
+    <!-- 頁尾載入器腳本 -->
+    <script src="footer-loader.js"></script>
 </body>
 </html>
