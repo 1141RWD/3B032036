@@ -538,8 +538,23 @@
 </head>
 <body>
 
-    <!-- 導覽列 -->
-    <div id="navbar-placeholder"></div>
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="images/logob.png" alt="黃金廣告投手">
+        </a>
+        <div class="mobile-menu-btn">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="service-assets.html">SEO 流量站群</a></li>
+            <li><a href="service-ads.html">廣告精準投放</a></li>
+            <li><a href="blog.html">專業分享</a></li>
+            <li><a href="contact.html" class="btn-cta pulse-effect">預約流量診斷</a></li>
+        </ul>
+    </nav>
 
     <!-- Hero 區塊 -->
     <section class="bg-light" style="padding-top: 120px; padding-bottom: 80px;">
@@ -558,25 +573,20 @@
                     </div>
                 </div>
                 <div class="col-lg-6 mt-4 mt-lg-0">
-                    <div class="stats-overview">
-                        <div class="row">
-                            <div class="col-4">
-                                <div class="stat-box">
-                                    <div class="stat-box-value">3.5x</div>
-                                    <div class="stat-box-label">ROAS 提升</div>
-                                </div>
+                    <!-- 數據儀表板 -->
+                    <div class="stats-container mt-5">
+                        <div class="row text-center">
+                            <div class="col-md-4 stat-item">
+                                <span class="counter" data-target="3.5">0</span><span>x</span>
+                                <p>ROAS提升</p>
                             </div>
-                            <div class="col-4">
-                                <div class="stat-box">
-                                    <div class="stat-box-value">-45%</div>
-                                    <div class="stat-box-label">點擊成本</div>
-                                </div>
+                            <div class="col-md-4 stat-item">
+                                <span class="counter" data-target="45">0</span><span>%</span>
+                                <p>點擊成本</p>
                             </div>
-                            <div class="col-4">
-                                <div class="stat-box">
-                                    <div class="stat-box-value">24/7</div>
-                                    <div class="stat-box-label">AI 優化</div>
-                                </div>
+                            <div class="col-md-4 stat-item">
+                                <span class="counter" data-target="24">0</span><span>/5</span>
+                                <p>廣告優化</p>
                             </div>
                         </div>
                     </div>
@@ -976,8 +986,8 @@
                         <p class="mb-0">成效趨勢圖表</p>
                         <small class="text-muted">可串接 Google Analytics、Facebook Pixel 等數據源</small>
                     </div>
-                </div>
-                
+        </div>
+
                 <div class="mt-4 pt-4 border-top">
                     <div class="row">
                         <div class="col-md-6">
@@ -999,7 +1009,7 @@
                             </ul>
                         </div>
                     </div>
-                </div>
+            </div>
             </div>
         </div>
     </section>
@@ -1016,8 +1026,92 @@
     </section>
 
     <!-- 頁尾 -->
-    <footer>
-        <div id="footer-placeholder"></div>
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <!-- 頂部內容區 -->
+            <div class="row mb-4">
+                <!-- 關於我們 -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h4 class="mb-4">關於我們</h4>
+                    <p class="text-muted">專業數位行銷團隊，提供全方位的流量與轉換解決方案，助您業績突飛猛進。</p>
+                </div>
+                
+                <!-- 服務項目 -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h4 class="mb-4">服務項目</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="service-assets.html" class="text-muted">SEO 流量站群</a></li>
+                        <li class="mb-2"><a href="service-ads.html" class="text-muted">廣告精準投放</a></li>
+                        <li class="mb-2"><a href="blog.html" class="text-muted">投手精選文章</a></li>
+                    </ul>
+                </div>
+                
+                <!-- 聯絡資訊 -->
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h4 class="mb-4">聯絡方式</h4>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-2">
+                            <i class="fas fa-map-marker-alt me-2"></i> 台北市信義區信義路十五段7號
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-envelope me-2"></i> <a href="mailto:info@example.com" class="text-muted">info@example.com</a>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-phone me-2"></i> <a href="tel:+886223456789" class="text-muted">(02) 2345-6789</a>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-clock me-2"></i> 週一至週五 9:00-18:00
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- 訂閱電子報 -->
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="mb-4">訂閱最新資訊</h4>
+                    <p class="text-muted mb-3">獲取最新的數位行銷趨勢與技巧</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="您的電子郵件" aria-label="您的電子郵件">
+                        <button class="btn btn-primary" type="button">訂閱</button>
+                    </div>
+                    
+                    <!-- 社群媒體連結 -->
+                    <h4 class="mb-3 mt-4">追蹤我們</h4>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white fs-4"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white fs-4"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-white fs-4"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white fs-4"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-white fs-4"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 中部連結區 -->
+            <div class="row py-4 border-top border-secondary border-bottom">
+                <div class="col-md-8">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item me-3"><a href="index.html" class="text-muted">首頁</a></li>
+    
+                        <li class="list-inline-item me-3"><a href="blog.html" class="text-muted">專業分享</a></li>
+                        <li class="list-inline-item me-3"><a href="contact.html" class="text-muted">聯絡我們</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                    <a href="#" class="text-muted me-3">隱私政策</a>
+                    <a href="#" class="text-muted">使用條款</a>
+                </div>
+            </div>
+            
+            <!-- 底部版權區 -->
+            <div class="row pt-4">
+                <div class="col-md-6">
+                    <p class="mb-0 text-muted">&copy; 2025 黃金廣告投手有限公司. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0 text-muted">由 <span class="text-white">黃金廣告投手</span> 設計與開發</p>
+                </div>
+            </div>
+        </div>
     </footer>
     
     <!-- Bootstrap JS Bundle with Popper -->
@@ -1025,12 +1119,6 @@
     
     <!-- 自定義 JS -->
     <script src="script.js"></script>
-
-    <!-- 頁首載入器腳本 -->
-    <script src="navbar-loader.js"></script>
-
-    <!-- 頁尾載入器腳本 -->
-    <script src="footer-loader.js"></script>
     
 </body>
 </html>

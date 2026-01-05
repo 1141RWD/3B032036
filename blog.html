@@ -85,11 +85,17 @@
             justify-content: space-between;
             align-items: center;
             transition: all 0.3s;
+            cursor: pointer;
         }
         
         .category-list a:hover {
             color: var(--blue-primary);
             padding-left: 5px;
+        }
+        
+        .category-list a.active {
+            color: var(--blue-primary);
+            font-weight: 600;
         }
         
         .category-list .badge {
@@ -149,26 +155,17 @@
             color: var(--text-muted);
         }
         
-        .tag-cloud {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
+        .category-filter.active {
+            color: var(--blue-primary) !important;
+            font-weight: 600;
         }
         
-        .tag-cloud a {
-            padding: 6px 14px;
-            background: var(--blue-light);
-            color: var(--blue-primary);
-            border-radius: 20px;
-            font-size: 0.85rem;
-            text-decoration: none;
-            transition: all 0.3s;
+        .blog-post-item {
+            transition: all 0.3s ease;
         }
         
-        .tag-cloud a:hover {
-            background: var(--blue-primary);
-            color: #fff;
-            transform: translateY(-2px);
+        .blog-post-item.hidden {
+            display: none !important;
         }
         
         .blog-post-card {
@@ -186,26 +183,6 @@
         
         .blog-post-meta i {
             color: var(--blue-primary);
-        }
-        
-        .pagination-wrapper {
-            margin-top: 50px;
-        }
-        
-        .page-link {
-            color: var(--blue-primary);
-            border-color: var(--border-light);
-        }
-        
-        .page-link:hover {
-            background: var(--blue-light);
-            border-color: var(--blue-primary);
-            color: var(--blue-primary);
-        }
-        
-        .page-item.active .page-link {
-            background: var(--blue-primary);
-            border-color: var(--blue-primary);
         }
         
         @media (max-width: 768px) {
@@ -226,8 +203,23 @@
 </head>
 <body>
 
-    <!-- 導覽列 -->
-    <div id="navbar-placeholder"></div>
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="images/logob.png" alt="黃金廣告投手">
+        </a>
+        <div class="mobile-menu-btn">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">首頁</a></li>
+            <li><a href="service-assets.html">SEO 流量站群</a></li>
+            <li><a href="service-ads.html">廣告精準投放</a></li>
+            <li><a href="blog.html">專業分享</a></li>
+            <li><a href="contact.html" class="btn-cta pulse-effect">預約流量診斷</a></li>
+        </ul>
+    </nav>
 
     <!-- Blog Hero 區塊 -->
     <section class="blog-hero">
@@ -255,11 +247,11 @@
                     <!-- 文章列表 -->
                     <div class="row g-4">
                         <!-- 文章 1 -->
-                        <div class="col-md-6">
+                        <div class="col-md-6 blog-post-item" data-category="SEO 優化">
                             <div class="blog-post-card">
                                 <div class="blog-image">
                                     <div style="background: var(--blue-light); height: 100%; display: flex; align-items: center; justify-content: center;">
-                                        <i class="fas fa-chart-line fa-3x text-blue"></i>
+                                        <i class="fas fa-chart-line fa-3x text-blue"><img src="/images/blog-1.jpg" alt=""></i>
                                     </div>
                                     <span class="blog-category">SEO 優化</span>
                                 </div>
@@ -277,11 +269,11 @@
                         </div>
                         
                         <!-- 文章 2 -->
-                        <div class="col-md-6">
+                        <div class="col-md-6 blog-post-item" data-category="廣告投放">
                             <div class="blog-post-card">
                                 <div class="blog-image">
                                     <div style="background: var(--blue-light); height: 100%; display: flex; align-items: center; justify-content: center;">
-                                        <i class="fas fa-ad fa-3x text-blue"></i>
+                                        <i class="fas fa-ad fa-3x text-blue"><img src="/images/blog-2.jpg" alt=""></i>
                                     </div>
                                     <span class="blog-category">廣告投放</span>
                                 </div>
@@ -299,11 +291,11 @@
                         </div>
                         
                         <!-- 文章 3 -->
-                        <div class="col-md-6">
+                        <div class="col-md-6 blog-post-item" data-category="AI 技術">
                             <div class="blog-post-card">
                                 <div class="blog-image">
                                     <div style="background: var(--blue-light); height: 100%; display: flex; align-items: center; justify-content: center;">
-                                        <i class="fas fa-robot fa-3x text-blue"></i>
+                                        <i class="fas fa-robot fa-3x text-blue"><img src="/images/blog-1.jpg" alt="3"></i>
                                     </div>
                                     <span class="blog-category">AI 技術</span>
                                 </div>
@@ -321,11 +313,11 @@
                         </div>
                         
                         <!-- 文章 4 -->
-                        <div class="col-md-6">
+                        <div class="col-md-6 blog-post-item" data-category="社群行銷">
                             <div class="blog-post-card">
                                 <div class="blog-image">
                                     <div style="background: var(--blue-light); height: 100%; display: flex; align-items: center; justify-content: center;">
-                                        <i class="fas fa-mobile-alt fa-3x text-blue"></i>
+                                        <i class="fas fa-mobile-alt fa-3x text-blue"><img src="/images/blog-4.jpg" alt=""></i>
                                     </div>
                                     <span class="blog-category">行動行銷</span>
                                 </div>
@@ -343,11 +335,11 @@
                         </div>
                         
                         <!-- 文章 5 -->
-                        <div class="col-md-6">
+                        <div class="col-md-6 blog-post-item" data-category="數據分析">
                             <div class="blog-post-card">
                                 <div class="blog-image">
                                     <div style="background: var(--blue-light); height: 100%; display: flex; align-items: center; justify-content: center;">
-                                        <i class="fas fa-analytics fa-3x text-blue"></i>
+                                        <i class="fas fa-analytics fa-3x text-blue"><img src="/images/blog-5.jpg" alt=""></i>
                                     </div>
                                     <span class="blog-category">數據分析</span>
                                 </div>
@@ -365,11 +357,11 @@
                         </div>
                         
                         <!-- 文章 6 -->
-                        <div class="col-md-6">
+                        <div class="col-md-6 blog-post-item" data-category="SEO 優化">
                             <div class="blog-post-card">
                                 <div class="blog-image">
                                     <div style="background: var(--blue-light); height: 100%; display: flex; align-items: center; justify-content: center;">
-                                        <i class="fas fa-sitemap fa-3x text-blue"></i>
+                                        <i class="fas fa-sitemap fa-3x text-blue"><img src="/images/blog-6.jpg" alt=""></i>
                                     </div>
                                     <span class="blog-category">SEO 優化</span>
                                 </div>
@@ -387,11 +379,11 @@
                         </div>
                         
                         <!-- 文章 7 -->
-                        <div class="col-md-6">
+                        <div class="col-md-6 blog-post-item" data-category="內容行銷">
                             <div class="blog-post-card">
                                 <div class="blog-image">
                                     <div style="background: var(--blue-light); height: 100%; display: flex; align-items: center; justify-content: center;">
-                                        <i class="fas fa-bullhorn fa-3x text-blue"></i>
+                                        <i class="fas fa-bullhorn fa-3x text-blue"><img src="/images/blog-7.jpg" alt=""></i>
                                     </div>
                                     <span class="blog-category">內容行銷</span>
                                 </div>
@@ -409,11 +401,11 @@
                         </div>
                         
                         <!-- 文章 8 -->
-                        <div class="col-md-6">
+                        <div class="col-md-6 blog-post-item" data-category="內容行銷">
                             <div class="blog-post-card">
                                 <div class="blog-image">
                                     <div style="background: var(--blue-light); height: 100%; display: flex; align-items: center; justify-content: center;">
-                                        <i class="fas fa-envelope fa-3x text-blue"></i>
+                                        <i class="fas fa-envelope fa-3x text-blue"><img src="/images/blog-8.jpg" alt=""></i>
                                     </div>
                                     <span class="blog-category">Email 行銷</span>
                                 </div>
@@ -431,11 +423,11 @@
                         </div>
                         
                         <!-- 文章 9 -->
-                        <div class="col-md-6">
+                        <div class="col-md-6 blog-post-item" data-category="電商行銷">
                             <div class="blog-post-card">
                                 <div class="blog-image">
                                     <div style="background: var(--blue-light); height: 100%; display: flex; align-items: center; justify-content: center;">
-                                        <i class="fas fa-shopping-cart fa-3x text-blue"></i>
+                                        <i class="fas fa-shopping-cart fa-3x text-blue"><img src="/images/blog-9.jpg" alt=""></i>
                                     </div>
                                     <span class="blog-category">電商行銷</span>
                                 </div>
@@ -453,11 +445,11 @@
                         </div>
                         
                         <!-- 文章 10 -->
-                        <div class="col-md-6">
+                        <div class="col-md-6 blog-post-item" data-category="社群行銷">
                             <div class="blog-post-card">
                                 <div class="blog-image">
                                     <div style="background: var(--blue-light); height: 100%; display: flex; align-items: center; justify-content: center;">
-                                        <i class="fas fa-video fa-3x text-blue"></i>
+                                        <i class="fas fa-video fa-3x text-blue"><img src="/images/blog-10.jpg" alt=""></i>
                                     </div>
                                     <span class="blog-category">影音行銷</span>
                                 </div>
@@ -475,11 +467,11 @@
                         </div>
                         
                         <!-- 文章 11 -->
-                        <div class="col-md-6">
+                        <div class="col-md-6 blog-post-item" data-category="SEO 優化">
                             <div class="blog-post-card">
                                 <div class="blog-image">
                                     <div style="background: var(--blue-light); height: 100%; display: flex; align-items: center; justify-content: center;">
-                                        <i class="fas fa-link fa-3x text-blue"></i>
+                                        <i class="fas fa-link fa-3x text-blue"><img src="/images/blog-11.jpg" alt=""></i>
                                     </div>
                                     <span class="blog-category">連結建立</span>
                                 </div>
@@ -497,11 +489,11 @@
                         </div>
                         
                         <!-- 文章 12 -->
-                        <div class="col-md-6">
+                        <div class="col-md-6 blog-post-item" data-category="社群行銷">
                             <div class="blog-post-card">
                                 <div class="blog-image">
                                     <div style="background: var(--blue-light); height: 100%; display: flex; align-items: center; justify-content: center;">
-                                        <i class="fas fa-users fa-3x text-blue"></i>
+                                        <i class="fas fa-users fa-3x text-blue"><img src="/images/blog-12.jpg" alt=""></i>
                                     </div>
                                     <span class="blog-category">社群行銷</span>
                                 </div>
@@ -519,11 +511,11 @@
                         </div>
                         
                         <!-- 文章 13 -->
-                        <div class="col-md-6">
+                        <div class="col-md-6 blog-post-item" data-category="SEO 優化">
                             <div class="blog-post-card">
                                 <div class="blog-image">
                                     <div style="background: var(--blue-light); height: 100%; display: flex; align-items: center; justify-content: center;">
-                                        <i class="fas fa-keyword fa-3x text-blue"></i>
+                                        <i class="fas fa-keyword fa-3x text-blue"><img src="/images/blog-13.jpg" alt=""></i>
                                     </div>
                                     <span class="blog-category">關鍵字研究</span>
                                 </div>
@@ -541,11 +533,11 @@
                         </div>
                         
                         <!-- 文章 14 -->
-                        <div class="col-md-6">
+                        <div class="col-md-6 blog-post-item" data-category="數據分析">
                             <div class="blog-post-card">
                                 <div class="blog-image">
                                     <div style="background: var(--blue-light); height: 100%; display: flex; align-items: center; justify-content: center;">
-                                        <i class="fas fa-chart-bar fa-3x text-blue"></i>
+                                        <i class="fas fa-chart-bar fa-3x text-blue"><img src="/images/blog-14.jpg" alt=""></i>
                                     </div>
                                     <span class="blog-category">數據分析</span>
                                 </div>
@@ -563,11 +555,11 @@
                         </div>
                         
                         <!-- 文章 15 -->
-                        <div class="col-md-6">
+                        <div class="col-md-6 blog-post-item" data-category="廣告投放">
                             <div class="blog-post-card">
                                 <div class="blog-image">
                                     <div style="background: var(--blue-light); height: 100%; display: flex; align-items: center; justify-content: center;">
-                                        <i class="fas fa-globe fa-3x text-blue"></i>
+                                        <i class="fas fa-globe fa-3x text-blue"><img src="/images/blog-15.jpg" alt=""></i>
                                     </div>
                                     <span class="blog-category">國際行銷</span>
                                 </div>
@@ -585,11 +577,11 @@
                         </div>
                         
                         <!-- 文章 16 -->
-                        <div class="col-md-6">
+                        <div class="col-md-6 blog-post-item" data-category="廣告投放">
                             <div class="blog-post-card">
                                 <div class="blog-image">
                                     <div style="background: var(--blue-light); height: 100%; display: flex; align-items: center; justify-content: center;">
-                                        <i class="fas fa-bullseye fa-3x text-blue"></i>
+                                        <i class="fas fa-bullseye fa-3x text-blue"><img src="/images/blog-16.jpg" alt=""></i>
                                     </div>
                                     <span class="blog-category">受眾定位</span>
                                 </div>
@@ -607,11 +599,11 @@
                         </div>
                         
                         <!-- 文章 17 -->
-                        <div class="col-md-6">
+                        <div class="col-md-6 blog-post-item" data-category="內容行銷">
                             <div class="blog-post-card">
                                 <div class="blog-image">
                                     <div style="background: var(--blue-light); height: 100%; display: flex; align-items: center; justify-content: center;">
-                                        <i class="fas fa-pen-fancy fa-3x text-blue"></i>
+                                        <i class="fas fa-pen-fancy fa-3x text-blue"><img src="/images/blog-17.jpg" alt=""></i>
                                     </div>
                                     <span class="blog-category">文案撰寫</span>
                                 </div>
@@ -629,11 +621,11 @@
                         </div>
                         
                         <!-- 文章 18 -->
-                        <div class="col-md-6">
+                        <div class="col-md-6 blog-post-item" data-category="AI 技術">
                             <div class="blog-post-card">
                                 <div class="blog-image">
                                     <div style="background: var(--blue-light); height: 100%; display: flex; align-items: center; justify-content: center;">
-                                        <i class="fas fa-cogs fa-3x text-blue"></i>
+                                        <i class="fas fa-cogs fa-3x text-blue"><img src="/images/blog-18.jpg" alt=""></i>
                                     </div>
                                     <span class="blog-category">行銷自動化</span>
                                 </div>
@@ -651,11 +643,11 @@
                         </div>
                         
                         <!-- 文章 19 -->
-                        <div class="col-md-6">
+                        <div class="col-md-6 blog-post-item" data-category="品牌建立">
                             <div class="blog-post-card">
                                 <div class="blog-image">
                                     <div style="background: var(--blue-light); height: 100%; display: flex; align-items: center; justify-content: center;">
-                                        <i class="fas fa-star fa-3x text-blue"></i>
+                                        <i class="fas fa-star fa-3x text-blue"><img src="/images/blog-19.jpg" alt=""></i>
                                     </div>
                                     <span class="blog-category">品牌建立</span>
                                 </div>
@@ -673,11 +665,11 @@
                         </div>
                         
                         <!-- 文章 20 -->
-                        <div class="col-md-6">
+                        <div class="col-md-6 blog-post-item" data-category="電商行銷">
                             <div class="blog-post-card">
                                 <div class="blog-image">
                                     <div style="background: var(--blue-light); height: 100%; display: flex; align-items: center; justify-content: center;">
-                                        <i class="fas fa-trophy fa-3x text-blue"></i>
+                                        <i class="fas fa-trophy fa-3x text-blue"><img src="/images/blog-20.jpg" alt=""></i>
                                     </div>
                                     <span class="blog-category">成功案例</span>
                                 </div>
@@ -693,23 +685,6 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    
-                    <!-- 分頁 -->
-                    <div class="pagination-wrapper">
-                        <nav aria-label="文章分頁">
-                            <ul class="pagination justify-content-center">
-                                <li class="page-item disabled">
-                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">上一頁</a>
-                                </li>
-                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#">下一頁</a>
-                                </li>
-                            </ul>
-                        </nav>
                     </div>
                 </div>
                 
@@ -760,34 +735,16 @@
                         <div class="sidebar-card">
                             <h4><i class="fas fa-folder text-blue me-2"></i>文章分類</h4>
                             <ul class="category-list">
-                                <li><a href="#">SEO 優化 <span class="badge">8</span></a></li>
-                                <li><a href="#">廣告投放 <span class="badge">6</span></a></li>
-                                <li><a href="#">AI 技術 <span class="badge">5</span></a></li>
-                                <li><a href="#">內容行銷 <span class="badge">4</span></a></li>
-                                <li><a href="#">數據分析 <span class="badge">4</span></a></li>
-                                <li><a href="#">社群行銷 <span class="badge">3</span></a></li>
-                                <li><a href="#">電商行銷 <span class="badge">3</span></a></li>
-                                <li><a href="#">品牌建立 <span class="badge">2</span></a></li>
+                                <li><a href="javascript:void(0);" class="category-filter" data-category="all">全部文章 <span class="badge">20</span></a></li>
+                                <li><a href="javascript:void(0);" class="category-filter" data-category="SEO 優化">SEO 優化 <span class="badge">3</span></a></li>
+                                <li><a href="javascript:void(0);" class="category-filter" data-category="廣告投放">廣告投放 <span class="badge">2</span></a></li>
+                                <li><a href="javascript:void(0);" class="category-filter" data-category="AI 技術">AI 技術 <span class="badge">2</span></a></li>
+                                <li><a href="javascript:void(0);" class="category-filter" data-category="內容行銷">內容行銷 <span class="badge">2</span></a></li>
+                                <li><a href="javascript:void(0);" class="category-filter" data-category="數據分析">數據分析 <span class="badge">2</span></a></li>
+                                <li><a href="javascript:void(0);" class="category-filter" data-category="社群行銷">社群行銷 <span class="badge">2</span></a></li>
+                                <li><a href="javascript:void(0);" class="category-filter" data-category="電商行銷">電商行銷 <span class="badge">1</span></a></li>
+                                <li><a href="javascript:void(0);" class="category-filter" data-category="品牌建立">品牌建立 <span class="badge">1</span></a></li>
                             </ul>
-                        </div>
-                        
-                        <!-- 標籤雲 -->
-                        <div class="sidebar-card">
-                            <h4><i class="fas fa-tags text-blue me-2"></i>熱門標籤</h4>
-                            <div class="tag-cloud">
-                                <a href="#">SEO</a>
-                                <a href="#">Google Ads</a>
-                                <a href="#">Facebook 廣告</a>
-                                <a href="#">AI 行銷</a>
-                                <a href="#">內容策略</a>
-                                <a href="#">數據分析</a>
-                                <a href="#">轉換優化</a>
-                                <a href="#">關鍵字研究</a>
-                                <a href="#">社群媒體</a>
-                                <a href="#">Email 行銷</a>
-                                <a href="#">行銷自動化</a>
-                                <a href="#">品牌行銷</a>
-                            </div>
                         </div>
                         
                         <!-- 訂閱電子報 -->
@@ -801,15 +758,76 @@
                                 </button>
                             </div>
                         </div>
-                    </div>
+            </div>
             </div>
             </div>
         </div>
     </section>
 
-    <!-- 頁尾 -->
-    <footer>
-        <div id="footer-placeholder"></div>
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h4 class="mb-4">關於我們</h4>
+                    <p class="text-muted">專業數位行銷團隊，提供全方位的流量與轉換解決方案，助您業績突飛猛進。</p>
+
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h4 class="mb-4">服務項目</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="service-assets.html" class="text-muted">SEO 流量站群</a></li>
+                        <li class="mb-2"><a href="service-ads.html" class="text-muted">廣告精準投放</a></li>
+                        <li class="mb-2"><a href="blog.html" class="text-muted">投手精選文章</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h4 class="mb-4">聯絡方式</h4>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 台北市信義區信義路十五段7號</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> <a href="mailto:info@example.com" class="text-muted">info@example.com</a></li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> <a href="tel:+886223456789" class="text-muted">(02) 2345-6789</a></li>
+                        <li class="mb-2"><i class="fas fa-clock me-2"></i> 週一至週五 9:00-18:00</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="mb-4">訂閱最新資訊</h4>
+                    <p class="text-muted mb-3">獲取最新的數位行銷趨勢與技巧</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="您的電子郵件" aria-label="您的電子郵件">
+                        <button class="btn btn-primary" type="button">訂閱</button>
+                    </div>
+                    <h4 class="mb-3 mt-4">追蹤我們</h4>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white fs-4"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white fs-4"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-white fs-4"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white fs-4"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="text-white fs-4"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row py-4 border-top border-secondary border-bottom">
+                <div class="col-md-8">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item me-3"><a href="index.html" class="text-muted">首頁</a></li>
+                        <li class="list-inline-item me-3"><a href="blog.html" class="text-muted">專業分享</a></li>
+                        <li class="list-inline-item me-3"><a href="contact.html" class="text-muted">聯絡我們</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                    <a href="#" class="text-muted me-3">隱私政策</a>
+                    <a href="#" class="text-muted">使用條款</a>
+                </div>
+            </div>
+            <div class="row pt-4">
+                <div class="col-md-6">
+                    <p class="mb-0 text-muted">&copy; 2025 黃金廣告投手有限公司. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0 text-muted">由 <span class="text-white">黃金廣告投手</span> 設計與開發</p>
+                </div>
+            </div>
+        </div>
     </footer>
     
     <!-- Bootstrap JS Bundle with Popper -->
@@ -818,10 +836,52 @@
     <!-- 自定義 JS -->
     <script src="script.js"></script>
 
-    <!-- 頁首載入器腳本 -->
-    <script src="navbar-loader.js"></script>
-
-    <!-- 頁尾載入器腳本 -->
-    <script src="footer-loader.js"></script>
+    
+    <script>
+        // 文章分類篩選功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryFilters = document.querySelectorAll('.category-filter');
+            const blogPosts = document.querySelectorAll('.blog-post-item');
+            
+            categoryFilters.forEach(filter => {
+                filter.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // 移除所有活動狀態
+                    categoryFilters.forEach(f => f.classList.remove('active'));
+                    
+                    // 添加當前活動狀態
+                    this.classList.add('active');
+                    
+                    const selectedCategory = this.getAttribute('data-category');
+                    
+                    // 篩選文章
+                    blogPosts.forEach(post => {
+                        if (selectedCategory === 'all') {
+                            post.classList.remove('hidden');
+                        } else {
+                            const postCategory = post.getAttribute('data-category');
+                            if (postCategory === selectedCategory) {
+                                post.classList.remove('hidden');
+                            } else {
+                                post.classList.add('hidden');
+                            }
+                        }
+                    });
+                    
+                    // 平滑滾動到文章列表頂部
+                    const blogSection = document.querySelector('.col-lg-8 .row');
+                    if (blogSection) {
+                        blogSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
+            });
+            
+            // 預設顯示全部文章
+            if (categoryFilters.length > 0) {
+                categoryFilters[0].classList.add('active');
+            }
+        });
+    </script>
 </body>
 </html>
